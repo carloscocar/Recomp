@@ -1,0 +1,38 @@
+:root {
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: #14130f;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  color: #ece7da;
+}
+input,
+select,
+button {
+  font-family: inherit;
+}
+input:focus,
+select:focus {
+  border-color: #e0a53d !important;
+}
+/* respect iOS notch / home indicator when installed to home screen */
+.safe-bottom {
+  padding-bottom: calc(14px + env(safe-area-inset-bottom));
+}
+.safe-top {
+  padding-top: calc(22px + env(safe-area-inset-top));
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
